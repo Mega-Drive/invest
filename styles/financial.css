@@ -1178,6 +1178,11 @@ section
 .service_icon svg path
 {
 	fill: #ffa800;
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
 }
 .service:hover svg path
 {
@@ -1315,12 +1320,17 @@ section
 }
 .system_item_icon svg
 {
-	width: 62px;
-	height: 62px;
+	max-width: 100%;
+	max-height: 100%;
 }
 .system_item_icon svg path
 {
 	fill: #c5c5c5;
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
 }
 .system_item:hover svg path
 {
