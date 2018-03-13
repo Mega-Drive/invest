@@ -5,12 +5,11 @@
 [Table of Contents]
 
 1. Vars and Inits
-2. Init Home Slider
+2. Set Header
 3. Init Search
 4. Init Menu
-6. Init SVG
-7. Init Clients Slider
-4. Init Google Map
+5. Init SVG
+6. Init Google Map
 
 
 ******************************/
@@ -41,11 +40,9 @@ $(document).ready(function()
 		setHeader();
 	});
 
-	initHomeSlider();
 	initSearch();
 	initMenu();
 	initSvg();
-	initClientsSlider();
 	initGoogleMap();
 
 	/* 
@@ -82,53 +79,6 @@ $(document).ready(function()
 		{
 			closeMenu();
 		}
-	}
-
-	/* 
-
-	2. Init Home Slider
-
-	*/
-
-	function initHomeSlider()
-	{
-		if($('.home_slider').length)
-		{
-			var homeSlider = $('.home_slider');
-
-			homeSlider.owlCarousel(
-			{
-				items:1,
-				loop:true,
-				smartSpeed:1200,
-				autoplay:true,
-				dots:true,
-				nav:false,
-				responsive:
-				{
-					0:{dots:false},
-					575:{dots:true}
-				}
-			});
-
-			if($('.home_slider_prev').length)
-			{
-				var prev = $('.home_slider_prev');
-				prev.on('click', function()
-				{
-					homeSlider.trigger('prev.owl.carousel');
-				});
-			}
-
-			if($('.home_slider_next').length)
-			{
-				var next = $('.home_slider_next');
-				next.on('click', function()
-				{
-					homeSlider.trigger('next.owl.carousel');
-				});
-			}
-		}	
 	}
 
 	/* 
@@ -195,7 +145,7 @@ $(document).ready(function()
 
 	/* 
 
-	6. Init SVG
+	5. Init SVG
 
 	*/
 
@@ -233,37 +183,7 @@ $(document).ready(function()
 
 	/* 
 
-	7. Init Clients Slider
-
-	*/
-
-	function initClientsSlider()
-	{
-		if($('.clients_slider').length)
-		{
-			var clientsSlider = $('.clients_slider');
-
-			clientsSlider.owlCarousel(
-			{
-				loop: true,
-				dots: false,
-				autoplay:true,
-				responsive:
-				{
-					0:{items:1},
-					575:{items:2},
-					768:{items:3},
-					992:{items:4},
-					1199:{items:5}
-					
-				}
-			});
-		}
-	}
-
-	/* 
-
-	4. Init Google Map
+	6. Init Google Map
 
 	*/
 

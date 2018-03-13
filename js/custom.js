@@ -10,7 +10,6 @@
 4. Init Menu
 5. Init Services Slider
 6. Init SVG
-7. Init Parallax
 
 
 ******************************/
@@ -45,7 +44,6 @@ $(document).ready(function()
 	initMenu();
 	initServicesSlider();
 	initSvg();
-	initParallax();
 
 	/* 
 
@@ -100,7 +98,7 @@ $(document).ready(function()
 				items:1,
 				loop:true,
 				smartSpeed:1200,
-				autoplay:false,
+				autoplay:true,
 				dots:true,
 				nav:false,
 				responsive:
@@ -209,6 +207,7 @@ $(document).ready(function()
 				loop:true,
 				nav:false,
 				dots:false,
+				autoplay:true,
 				smartSpeed:1200,
 				margin:30,
 				responsive:
@@ -274,16 +273,5 @@ $(document).ready(function()
 				$img.replaceWith($svg);
 			}, 'xml');
 		});
-	}
-
-	/* 
-
-	7. Initialize Parallax
-
-	*/
-
-	function initParallax()
-	{
-		
 	}
 });
